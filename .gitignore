@@ -38,7 +38,7 @@
 .vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*
+백준_알고리즘/*
 !.gitignore
 !*.cpp
 tempCodeRunnerFile
@@ -47,5 +47,8 @@ tempCodeRunnerFile.cpp
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+
+### Mac ###
+.DS_Store
 
 # End of https://www.gitignore.io/api/c++,visualstudiocode
