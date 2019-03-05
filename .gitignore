@@ -39,6 +39,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 백준_알고리즘/*
+SW_Expert_Academy/*
 !.gitignore
 !*.cpp
 tempCodeRunnerFile
