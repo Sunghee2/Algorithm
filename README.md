@@ -1,5 +1,9 @@
 # Algorithm
 
+Problem solving with **C++**
+
+> [java로 푼 알고리즘](https://github.com/Sunghee2/BOJ-Algorithm-Java)
+
 ### 자주 하는 실수
 
 1. 문제 꼼꼼하게 읽기
@@ -51,7 +55,28 @@
    `scanf("%c")` 여러 개 받고 엔터가 있어서 중간에 하나씩 못받고 그러면 `scanf("%c ")` 공백을 넣어주면 개행문자(스페이스, 엔터)를 무시해주는 역할을 함.
 
 2. type 변환
+
+   - int -> string : `to_string(num)`
+
+   - string -> char : `str.c_str()`
+
+   - char -> int : `atoi(char)`
+
+     > double :  `atof`
+     >
+     > long : `atol`
+
 3. 조합
+
+   - next_permutation / prev_permutation
+   - 재귀
+
+4. regex
+
+5. 비트연산자
+
+   - `>>`
+   - `<<`
 
 <br/>
 
@@ -62,3 +87,4 @@
    > set : 중복x
    >
    > multiset : 중복o
+
