@@ -39,6 +39,7 @@ Problem solving with **C++**
 
 6. break, return 섞어 씀 자꾸..
 7. 시험볼 때 11인지 14인지 확인하기..진짜 문법때문에 힘들었음ㅠ
+8. x, y (or m, n / i, j) 방향 체크!!!!
 
 <br/>
 
