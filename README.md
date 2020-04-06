@@ -17,6 +17,16 @@ Problem solving with **C++**
 2. 산술 오버플로우
 
    > 최소, 최대일 경우 테스트 꼭 해보기
+   >
+   > short (2 byte) = 2<sup>15</sup> - 1 (= 32767)
+   >
+   > int (4 byte) = 2<sup>31</sup> - 1 (= 2.1 X 10<sup>9</sup> = 21억)
+   >
+   > float (4 byte)
+   >
+   > long long(8 byte) = 2<sup>63</sup> - 1 (= 9.2 X 10<sup>18</sup>)
+   >
+   > double (8 byte)
 
 3. for문 여러개 일 경우 - 변수를 섞어씀..
 
@@ -55,6 +65,13 @@ Problem solving with **C++**
 
    `scanf("%c")` 여러 개 받고 엔터가 있어서 중간에 하나씩 못받고 그러면 `scanf("%c ")` 공백을 넣어주면 개행문자(스페이스, 엔터)를 무시해주는 역할을 함.
 
+   > 공백 포함된 입력 받을 때는
+   >
+   > ```c++
+   > string s;
+   > getline(cin, s);
+   > ```
+
 2. type 변환
 
    - int -> string : `to_string(num)`
@@ -88,4 +105,73 @@ Problem solving with **C++**
    > set : 중복x
    >
    > multiset : 중복o
+   
+2. 시간 복잡도
+
+   |   N 크기    |     시간복잡도      |
+   | :---------: | :-----------------: |
+   |    ~ 11     |        O(N!)        |
+   |    ~ 25     |  O(2<sup>N</sup>)   |
+   |    ~ 100    |  O(N<sup>4</sup>)   |
+   |    ~ 500    |  O(N<sup>3</sup>)   |
+   |   ~ 3000    | O(N<sup>2</sup>lgN) |
+   |   ~ 5000    |  O(N<sup>2</sup>)   |
+   | ~ 1,000,000 |       O(NlgN)       |
+   | ~10,000,000 |        O(N)         |
+   |   그 이상   |    O(lgN), O(1)     |
+
+3. 공간 복잡도
+
+   512MB = 1.2억개 int(4byte)
+
+4. 실수
+
+   1. 실수 저장 / 연산 과정에서 반드시 오차가 발생할 수 밖에 없음
+
+      ```c++
+      0.1 + 0.1 == 0.2 // false
+      ```
+
+      > double 상대 오차 10<sup>-15</sup>
+
+   2. double에 long long 정수 담으면 x, int는 O
+
+      > double 유효숫자는 15자리 / long long은 최대 19자리
+
+   3. 실수 비교
+
+      ```c++
+      a == b // X
+      abs(a - b) < 1e-12 // O
+      ```
+
+5. reference
+
+   원본 바꾸는 방법
+
+   ```c++
+   // pointer
+   void swap(int* a, int* b) {
+   	int tmp = *a;
+     *a = *b;
+     *b = tmp;
+   }
+   ```
+
+   ```c++
+   // reference
+   void swap(int& a, int& b) {
+   	int tmp = a;
+     a = b;
+     b = tmp;
+   }
+   ```
+
+   > vector 같은 stl의 경우 함수 인자로 보낼 때 복사본을 만들어서 보내 원본에 영향을 주지 않음.
+   >
+   > ```c++
+   > bool comp(vector<int> v1, vector<int> v2, int idx) { return v1[idx] > v2[idx]; }
+   > ```
+   >
+   > 그래서 위는 O(1) 이 아닌 O(N). (복사해서 보내기 때문) --> reference면 O(1)
 
