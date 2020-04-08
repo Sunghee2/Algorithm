@@ -152,7 +152,7 @@ Problem solving with **C++**
    ```c++
    // pointer
    void swap(int* a, int* b) {
-   	int tmp = *a;
+     int tmp = *a;
      *a = *b;
      *b = tmp;
    }
@@ -161,7 +161,7 @@ Problem solving with **C++**
    ```c++
    // reference
    void swap(int& a, int& b) {
-   	int tmp = a;
+     int tmp = a;
      a = b;
      b = tmp;
    }
