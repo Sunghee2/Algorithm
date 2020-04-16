@@ -39,17 +39,16 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 백준_알고리즘/*
+!SW_Expert_Academy/
 SW_Expert_Academy/*
-SW_Expert_Academy/D1/*
-SW_Expert_Academy/D2/*
-SW_Expert_Academy/D3/*
-SW_Expert_Academy/D4/*
-SW_Expert_Academy/D5/*
-SW_Expert_Academy/모의_SW_역량테스트/*
+!SW_Expert_Academy/*/
+SW_Expert_Academy/*/*
 Algospot/*
 LeetCode/*
 !.gitignore
 !*.cpp
+test/*
+baakingdog/*
 tempCodeRunnerFile
 tempCodeRunnerFile.cpp
 
